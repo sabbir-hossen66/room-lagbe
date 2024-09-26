@@ -11,6 +11,7 @@ const useGetAllData = () => {
         const response = await fetch('https://room-backend-final-main.vercel.app/api/rooms/all-rooms');
         const data = await response.json();
         setProperties(data.rooms)
+        console.log(data.room)
         setPropertiesLoader(false)
     }
     return [properties, propertiesLoader]
